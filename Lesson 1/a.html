@@ -1,0 +1,70 @@
+<div class="col-sm-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label class="control-label smalltxt col-sm-4">Balance Due:</label>
+                <div class="col-sm-3 smalltxt">
+                    <span class="control-label smalltxt col-sm-3 labelFontSize verticalalignMiddle" data-bind="text:CurrentReceipt().Due"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label class="control-label smalltxt col-sm-4">Next Court Date:</label>
+                <div class="col-sm-4 smalltxt">
+                    <div class="input-group" id="dateShow">
+                        <input type='text' class="form-control date" id="CourtDate" />
+                        <div class="input-group-addon glyphiconsButtonsColor " >
+                            <span class="glyphicon glyphicon-calendar "></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 smalltxt">
+                    <div class="input-group" id="timeShow">
+                        <input type='text' class="form-control date" id="CourtTime"/>
+                        <div class="input-group-addon glyphiconsButtonsColor" >
+                            <span class="glyphicon glyphicon-time"></span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-1 smalltxt">
+                    <span class="btn btn-sm roundedbtn btn-danger glyphiconsCloseButtonsColor" onclick="clearSingleDates(this)">
+                        <span class="fa fa-times"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label class="control-label smalltxt col-sm-4">Location:</label>
+                <div class="col-sm-8 smalltxt">
+                    <select id="DDLocation" class="form-control search-controls select2dd"
+                            data-bind="options:  CurrentReceipt().LocationSelectList,
+                       optionsValue: 'RoomDesc',
+                       optionsText: 'RoomDesc',
+                       optionsCaption: 'Select a Room',
+                       value:CurrentReceipt().Location"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label class="control-label smalltxt col-sm-4">Memo:</label>
+                <div class="col-sm-8 smalltxt">
+                    <textarea class="form-control text-uppercase txtarea smalltxt"
+                              placeholder="Memo" row="2" maxlength="256"
+                              data-bind="value:CurrentReceipt().Memo"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
